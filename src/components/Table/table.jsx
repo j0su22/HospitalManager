@@ -1,5 +1,5 @@
 import { Fragment } from 'react'
-import Table from 'react-bootstrap/Table'
+import Table as BTable from 'react-bootstrap/Table'
 const Table = (props) => {
     const { diseases, columns } = props
     // const diseases = [
@@ -11,7 +11,7 @@ const Table = (props) => {
     //     }
     // ]
     return (
-        <Table responsive>
+        <BTable responsive>
             <thead>
                 <tr>
                     {columns && columns.map(column => (
@@ -29,6 +29,6 @@ const Table = (props) => {
                     </tr>
                 ))}
             </tbody>
-        </Table>
+        </BTable>
     )
 }
