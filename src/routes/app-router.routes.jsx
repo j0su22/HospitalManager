@@ -9,6 +9,7 @@ import PATHS_COLLECTIONS from "./paths.routes"
 const Home = lazy(() => import("../views/Home"))
 const Login = lazy(() => import("../views/Login"))
 const Diseases = lazy(() => import("../views/modules/Diseases/Diseases"))
+const Create = lazy(() => import("../views/modules/Diseases/Create"))
 const { AdminLayout } = LayoutCollections
 
 const {
@@ -55,6 +56,10 @@ const appRoutes = [
             {
                 path: PRIVATE_DISEASES,
                 element: <Diseases />
+            },
+            {
+                path: PRIVATE_DISEASES_CREATE,
+                element:<Create />
             }
         ],
     },

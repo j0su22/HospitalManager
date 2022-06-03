@@ -1,24 +1,31 @@
 import React, { Component } from 'react'
-export default class Login extends Component {
+export default class Create extends Component {
   render() {
     return (
-        <div class = "bodya">
+        <div class = "bodyb">
       <form>
-        <h3>Sign In</h3>
+        <h3>Create a new entry for disease</h3>
         <div className="mb-3">
-          <label>Username</label>
+          <label>Name</label>
           <input
-            type="email"
+            type="name"
             className="form-control"
-            placeholder="Enter email"
           />
         </div>
         <div className="mb-3">
-          <label>Password</label>
+          <label>Inheritance</label>
           <input
-            type="password"
+            type="name"
+            name="inheritance"
             className="form-control"
-            placeholder="Enter password"
+          />
+        </div>
+        <div className="mb-3">
+          <label>Hospital</label>
+          <input
+            type="name"
+            name="hospital"
+            className="form-control"
           />
         </div>
         <div className="d-grid">

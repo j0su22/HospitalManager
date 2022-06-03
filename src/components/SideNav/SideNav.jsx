@@ -5,7 +5,9 @@ import classnames from "classnames"
 import { Link, useLocation } from "react-router-dom"
 import {
     PRIVATE_DASHBOARD,
-    PRIVATE_DISEASES
+    PRIVATE_DISEASES,
+    PRIVATE_DISEASES_CREATE,
+    PUBLIC_LOGIN
 } from "../../routes/app-router.routes"
 
 const SideNav = () => {
@@ -39,6 +41,18 @@ const SideNav = () => {
                     <Link key={PRIVATE_DISEASES} to={PRIVATE_DISEASES} className={classnames("nav-link text-white", { "active": activeKey === PRIVATE_DISEASES })} style={{ lineHeight: 0 }} onClick={handleItemSelect}>
                         <Icon.ExclamationDiamondFill className="bi pe-none me-2" width={16} height={16} />
                         <span className="ms-4">Diseases</span>
+                    </Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Link key={PRIVATE_DISEASES} to={PRIVATE_DISEASES_CREATE} className={classnames("nav-link text-white", { "active": activeKey === PRIVATE_DISEASES_CREATE })} style={{ lineHeight: 0 }} onClick={handleItemSelect}>
+                        <Icon.PatchPlusFill className="bi pe-none me-2" width={16} height={16} />
+                        <span className="ms-4">Create</span>
+                    </Link>
+                </Nav.Item>
+                <Nav.Item>
+                    <Link key={PRIVATE_DISEASES} to={PUBLIC_LOGIN} className={classnames("nav-link text-white", { "active": activeKey === PUBLIC_LOGIN })} style={{ lineHeight: 0 }} onClick={handleItemSelect}>
+                        <Icon.PeopleFill className="bi pe-none me-2" width={16} height={16} />
+                        <span className="ms-4">Login</span>
                     </Link>
                 </Nav.Item>
             </Nav>

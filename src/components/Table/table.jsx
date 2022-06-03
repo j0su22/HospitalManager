@@ -1,34 +1,30 @@
 import { Fragment } from 'react'
-import Table as BTable from 'react-bootstrap/Table'
+import { Table as BTable } from 'react-bootstrap'
+
 const Table = (props) => {
-    const { diseases, columns } = props
-    // const diseases = [
-    //     {
-    //         id: 1,
-    //         name: 'Disease 1',
-    //         cases: 10,
-    //         incidence_city: 'City 1',
-    //     }
-    // ]
+    const { items, columns } = props
+
     return (
         <BTable responsive>
             <thead>
                 <tr>
-                    {columns && columns.map(column => (
-                        <Fragment key={column.id}>
+                    {columns && columns.map((column, index) => (
+                        <Fragment key={index}>
                             <td>{column.name}</td>
                         </Fragment>
                     ))}
                 </tr>
             </thead>
             <tbody>
-                {diseases && diseases.map(disease => (
-                    <tr key={disease.id}>
-                        <td>{disease.name}</td>
-                        <td>{disease.cases}</td>
+                {items && items.map((item, index) => (
+                    <tr key={index}>
+                        <td>{item.name}</td>
+                        <td>{item.inheritance}</td>
                     </tr>
                 ))}
             </tbody>
         </BTable>
     )
 }
+
+export default Table
