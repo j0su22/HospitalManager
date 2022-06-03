@@ -6,7 +6,14 @@ const Home = () => {
     return (
         <div>
             <h1>Bienvenido al registro de enfermedades</h1>
-            <p>Da <Link to='/diseases'>click aquí</Link> para ver las enfermedades registradas en nuestra base de datos</p>
+            <p>Created by:</p>
+            <ul>
+                <li>Reyna Galan - MeowGuaurr</li>
+                <li>Renatto Baca - RenattoB</li>
+                <li>Rafael Marrugo - GalassoX</li>
+                <li>Mario Rodriguez - MarioRodriguez01</li>
+                <li>Josué Cortez - j0su22 </li>
+            </ul>
         </div>
     )
 }
