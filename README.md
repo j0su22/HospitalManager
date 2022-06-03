@@ -1,6 +1,6 @@
 # 📋 Proyecto MVC
 
-## 🏥 Hospital Manager API
+## 🏥 Hospital Manager
 Front end del proyecto final del bootcamp csf6 grupo 04.
 
 ## ✒️ Autores
